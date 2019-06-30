@@ -73,9 +73,38 @@ table {
 .logo {
 	height: 100%;
 	margin: 0 auto 0 3rem;
+	padding: 1rem;
 	display: flex;
 	align-items: center;
 	svg {
 		height: 80%;
+	}
+}
+
+.menu {
+	font-size: 2rem;
+	display: flex;
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+	a {
+		text-decoration: none;
+	}
+	li {
+		color: $lighter;
+		margin-left: 6rem;
+	}
+}
+
+.social-icons {
+	display: flex;
+	margin: 0 1rem 0 auto;
+	a {
+		padding: 0 1rem 0 0;
+	}
+	svg {
+		height: 100%;
+		width: 5rem;
+		padding: 1rem;
 	}
 }
