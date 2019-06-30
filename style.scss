@@ -61,9 +61,11 @@ table {
 
 .navigation {
 	height: 10rem;
-	position: relative;
+	position: fixed;
+	width: 100%;
 	display: flex;
 	align-items: center;
+	z-index: 1;
 }
 
 .colour-square {
@@ -110,5 +112,36 @@ table {
 		height: 100%;
 		width: 5rem;
 		padding: 1rem;
+	}
+}
+
+.first-row {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	background-image: linear-gradient(to top left, $neut, $darker);
+}
+
+.stripes {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: rotate(-60deg);
+	height: .5rem;
+	width: 100%;
+	background-color: $lighter;
+	&:nth-child(1) {
+		right: -110rem;
+	}
+	&:nth-child(2) {
+		right: -108rem;
+	}
+	&:nth-child(3) {
+		left: -110rem;
+		transform: rotate(60deg);
+	}
+	&:nth-child(4) {
+		left: -108rem;
+		transform: rotate(60deg);
 	}
 }
