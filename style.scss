@@ -55,3 +55,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.navigation {
+	height: 10rem;
+}
+
+.colour-square {
+	height: 100%;
+	width: 10rem;
+	background-color: $light;
+}
