@@ -138,6 +138,30 @@ table {
   border-spacing: 0;
 }
 
+h1 {
+  font-size: 8.5rem;
+  font-weight: 700;
+  color: #fdfcfc;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fdfcfc;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fdfcfc;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fdfcfc;
+}
+
 .navigation {
   height: 10rem;
   position: fixed;
@@ -188,11 +212,15 @@ table {
 
 .menu a {
   text-decoration: none;
+  margin-left: 6rem;
+}
+
+.menu a:first-child {
+  margin: 0;
 }
 
 .menu li {
   color: #fdfcfc;
-  margin-left: 6rem;
 }
 
 .social-icons {
@@ -216,8 +244,47 @@ table {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-image: -webkit-gradient(linear, right bottom, left top, from(#200c28), to(#120516));
   background-image: linear-gradient(to top left, #200c28, #120516);
+}
+
+.first-row-cont {
+  max-width: 100rem;
+  width: 100%;
+  background-color: #5f1e92;
+  margin: 20rem 4rem 10rem;
+}
+
+.first-row-cont h1 {
+  text-transform: uppercase;
+  font-size: 10rem;
+}
+
+.tour-dates-btn {
+  background-color: #fdfcfc;
+  outline: none;
+  color: #120516;
+  border: none;
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.music-list-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .stripes {
@@ -231,22 +298,22 @@ table {
   background-color: #fdfcfc;
 }
 
-.stripes:nth-child(1) {
-  right: -110rem;
+.stripe-one {
+  right: -41%;
 }
 
-.stripes:nth-child(2) {
-  right: -108rem;
+.stripe-two {
+  right: -42%;
 }
 
-.stripes:nth-child(3) {
-  left: -110rem;
+.stripe-three {
+  left: -41%;
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
 }
 
-.stripes:nth-child(4) {
-  left: -108rem;
+.stripe-four {
+  left: -42%;
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
 }

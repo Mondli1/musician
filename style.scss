@@ -139,6 +139,30 @@ table {
   border-spacing: 0;
 }
 
+h1 {
+  font-size: 8.5rem;
+  font-weight: 700;
+  color: $lighter;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: $lighter;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $lighter;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $lighter;
+}
+
 .navigation {
   height: 10rem;
   position: fixed;
@@ -175,10 +199,13 @@ table {
   transform: translateX(-50%);
   a {
     text-decoration: none;
+    margin-left: 6rem;
+    &:first-child {
+      margin: 0;
+    }
   }
   li {
     color: $lighter;
-    margin-left: 6rem;
   }
 }
 
@@ -199,7 +226,37 @@ table {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
   background-image: linear-gradient(to top left, $neut, $darker);
+}
+
+.first-row-cont {
+  max-width: 100rem;
+  width: 100%;
+  background-color: $light;
+  margin: 20rem 4rem 10rem;
+  h1 {
+    text-transform: uppercase;
+    font-size: 10rem;
+  }
+}
+
+.tour-dates-btn {
+  background-color: $lighter;
+  outline: none;
+  color: $darker;
+  border: none;
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.music-list-btns {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
 }
 
 .stripes {
@@ -210,18 +267,22 @@ table {
   height: 0.5rem;
   width: 100%;
   background-color: $lighter;
-  &:nth-child(1) {
-    right: -110rem;
-  }
-  &:nth-child(2) {
-    right: -108rem;
-  }
-  &:nth-child(3) {
-    left: -110rem;
-    transform: rotate(60deg);
-  }
-  &:nth-child(4) {
-    left: -108rem;
-    transform: rotate(60deg);
-  }
+}
+
+.stripe-one {
+  right: -41%;
+}
+
+.stripe-two {
+  right: -42%;
+}
+
+.stripe-three {
+  left: -41%;
+  transform: rotate(60deg);
+}
+
+.stripe-four {
+  left: -42%;
+  transform: rotate(60deg);
 }
