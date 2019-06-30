@@ -57,11 +57,34 @@ table {
 
 .navigation {
   height: 10rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .colour-square {
   height: 100%;
+  width: 100%;
   width: 10rem;
   background-color: #5F1E92;
+}
+
+.logo {
+  height: 100%;
+  margin: 0 auto 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo svg {
+  height: 80%;
 }
 /*# sourceMappingURL=style.css.map */
