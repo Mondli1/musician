@@ -250,31 +250,51 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: -webkit-gradient(linear, right bottom, left top, from(#200c28), to(#120516));
-  background-image: linear-gradient(to top left, #200c28, #120516);
+  background: url(images/concert-compressor.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.first-row:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#200c284f), to(#120516));
+  background-image: linear-gradient(to top left, #200c284f, #120516);
 }
 
 .first-row-cont {
   max-width: 100rem;
   width: 100%;
-  background-color: #5f1e92;
-  margin: 20rem 4rem 10rem;
+  margin: 9% 4rem 4%;
+  position: relative;
+  z-index: 1;
 }
 
 .first-row-cont h1 {
   text-transform: uppercase;
   font-size: 10rem;
+  line-height: 7.5rem;
 }
 
 .tour-dates-btn {
   background-color: #fdfcfc;
   outline: none;
   color: #120516;
+  padding: .5rem 1rem;
   border: none;
+  border-radius: .25rem;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
   font-size: 2rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .music-list-btns {
@@ -285,10 +305,78 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 5rem 0 3rem;
+  position: relative;
+}
+
+.music-list-btns button {
+  position: relative;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fdfcfc;
+  margin-left: 4rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.music-list-btns a:nth-child(2) svg {
+  top: -0.3rem;
+}
+
+.music-list-btns svg {
+  position: absolute;
+  left: -2.7rem;
+  top: 0;
+  height: 100%;
+}
+
+.music-calls a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+  color: black;
+}
+
+.music-calls a:nth-child(2) {
+  color: #fdfcfc;
+}
+
+.music-calls a svg {
+  height: 100%;
+  width: 2rem;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.music-calls a:nth-child(1) button {
+  background-color: #fdfcfc;
+}
+
+.music-calls a:nth-child(1) svg {
+  top: 0.2rem;
+  width: 2rem;
+}
+
+.music-calls button {
+  margin-right: 1rem;
+  border: none;
+  color: inherit;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  border-radius: 0.3rem;
+  font-weight: 700;
 }
 
 .stripes {
   position: absolute;
+  z-index: 1;
   bottom: 0;
   right: 0;
   -webkit-transform: rotate(-60deg);
