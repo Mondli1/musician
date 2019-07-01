@@ -173,6 +173,12 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
+  -webkit-transition: height .4s;
+  transition: height .4s;
+}
+
+.nav-shrink {
+  height: 5rem;
 }
 
 .colour-square {
@@ -192,6 +198,9 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .logo svg {
@@ -213,10 +222,16 @@ h4 {
 .menu a {
   text-decoration: none;
   margin-left: 6rem;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .menu a:first-child {
   margin: 0;
+}
+
+.menu a:hover {
+  opacity: 0.7;
 }
 
 .menu li {
@@ -232,6 +247,12 @@ h4 {
 
 .social-icons a {
   padding: 0 1rem 0 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
 }
 
 .social-icons svg {
@@ -241,7 +262,7 @@ h4 {
 }
 
 .first-row {
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   position: relative;
   display: -webkit-box;
@@ -266,9 +287,9 @@ h4 {
   background-image: linear-gradient(to top left, #200c284f, #120516);
 }
 
-@media (max-height: 1240px) and (orientation: landscape) {
+@media (min-height: 1240px) and (max-height: 1500px) and (orientation: landscape) {
   .first-row {
-    height: auto;
+    height: 100vh;
   }
 }
 
@@ -301,6 +322,12 @@ h4 {
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.tour-dates-btn:hover {
+  opacity: 0.7;
 }
 
 .music-list-btns {
@@ -325,6 +352,12 @@ h4 {
   font-size: 1.9rem;
   font-weight: 700;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.music-list-btns button:hover {
+  opacity: 0.7;
 }
 
 .music-list-btns a:nth-child(2) svg {
@@ -344,6 +377,12 @@ h4 {
   display: inline-flex;
   text-decoration: none;
   color: black;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.music-calls a:hover {
+  opacity: 0.7;
 }
 
 .music-calls a:nth-child(2) {
@@ -416,16 +455,22 @@ h4 {
   width: 32.5%;
   background-color: #200c28;
   position: relative;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .tiles a:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tiles a:hover {
+  opacity: 0.85;
 }
 
 .tiles p {

@@ -170,6 +170,11 @@ h4 {
   display: flex;
   align-items: center;
   z-index: 2;
+  transition: height .4s;
+}
+
+.nav-shrink {
+  height: 5rem;
 }
 
 .colour-square {
@@ -185,6 +190,7 @@ h4 {
   padding: 1rem;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   svg {
     height: 80%;
   }
@@ -203,6 +209,10 @@ h4 {
     &:first-child {
       margin: 0;
     }
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
   }
   li {
     color: $lighter;
@@ -214,6 +224,10 @@ h4 {
   margin: 0 1rem 0 auto;
   a {
     padding: 0 1rem 0 0;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
   }
   svg {
     height: 100%;
@@ -223,7 +237,7 @@ h4 {
 }
 
 .first-row {
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -240,8 +254,8 @@ h4 {
     height: 100%;
     background-image: linear-gradient(to top left, #200c284f, $darker);
   }
-  @media (max-height: 1240px) and (orientation: landscape) {
-    height: auto;
+  @media (min-height: 1240px) and (max-height: 1500px) and (orientation: landscape) {
+    height: 100vh;
   }
 }
 
@@ -273,6 +287,10 @@ h4 {
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .music-list-btns {
@@ -291,6 +309,10 @@ h4 {
     font-size: 1.9rem;
     font-weight: 700;
     cursor: pointer;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
   }
   a {
     &:nth-child(2) {
@@ -312,6 +334,10 @@ h4 {
     display: inline-flex;
     text-decoration: none;
     color: black;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
     &:nth-child(2) {
       color: $lighter;
     }
@@ -373,14 +399,18 @@ h4 {
     width: 32.5%;
     background-color: $neut;
     position: relative;
+    transition: opacity 0.3s;
     &:after {
       position: absolute;
-      content: '';
+      content: "";
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0,0,0,.3); 
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    &:hover {
+      opacity: 0.85;
     }
   }
   p {
