@@ -462,6 +462,18 @@ h4 {
   transform: rotate(60deg);
 }
 
+.slide {
+  font-size: 0;
+}
+
+.slide-container {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 ::selection {
   background-color: $light;
 }
