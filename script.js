@@ -15,18 +15,18 @@ const size = slide.clientWidth;
 
 function changeSlide(newSlide) {
   slide.style.transform = 'translateX(' + (-size * newSlide) + 'px)';
-  slide.style.transition = ' .2s';
+  slide.style.transition = ' .5s';
 }
 
 function autoSlide() {
+  
   if (currentSlide < 2) {
     currentSlide++;
     changeSlide(currentSlide);
-  }
-  if (currentSlide === 2) {
+  } else {
     slide.style.transform = 'translateX(0)';
-    currentSlide = 0;
+    currentSlide = 0; 
   }
 }
 
-setInterval(autoSlide, 1000);
+setInterval(autoSlide, 3000);

@@ -173,8 +173,8 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
-  -webkit-transition: height .4s;
-  transition: height .4s;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
 }
 
 .nav-shrink {
@@ -271,7 +271,7 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url(images/concert-compressor.jpg);
+  background-image: url(images/concert-compressor.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -405,7 +405,7 @@ h4 {
   width: 2rem;
 }
 
-.music-calls button {
+.music-calls-btn {
   margin-right: 1rem;
   border: none;
   color: inherit;
@@ -417,6 +417,19 @@ h4 {
   padding: 1rem 3rem;
   border-radius: 0.3rem;
   font-weight: 700;
+}
+
+.slider {
+  background-color: #fdfcfc;
+  position: relative;
+  z-index: 2;
+  margin: 3rem 4rem;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.slider:hover {
+  opacity: 0.7;
 }
 
 .tiles {
@@ -525,16 +538,110 @@ h4 {
           transform: rotate(60deg);
 }
 
-.slide {
-  font-size: 0;
-}
-
 .slide-container {
   position: relative;
   display: inline-block;
-  width: 300px;
+  width: 100rem;
   overflow: hidden;
   white-space: nowrap;
+  margin: 6rem 4rem 15rem;
+}
+
+.slide-container h2 {
+  text-align: center;
+  padding-bottom: 7rem;
+  font-size: 6rem;
+}
+
+.slide {
+  font-size: 0;
+  width: 100%;
+  position: relative;
+}
+
+.slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100%;
+}
+
+.slide div {
+  width: 100%;
+  height: 400px;
+  display: inline-block;
+  position: relative;
+  white-space: normal;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.slide div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.slide h4,
+.slide p {
+  font-size: 5.5rem;
+  position: relative;
+  z-index: 2;
+  padding: 7rem 4rem 3rem;
+}
+
+.slide p {
+  color: #fdfcfc;
+  font-size: 2rem;
+  padding: 0 4rem;
+}
+
+.slide a {
+  color: #120516;
+}
+
+.second-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.second-row svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1400px) {
+  .second-row svg {
+    height: 100%;
+  }
+}
+
+.second-row > .stripes {
+  top: 0;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.second-row > .stripe-three, .second-row .stripe-four {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
 }
 
 ::-moz-selection {

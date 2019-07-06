@@ -170,7 +170,7 @@ h4 {
   display: flex;
   align-items: center;
   z-index: 2;
-  transition: height .4s;
+  transition: height 0.4s;
 }
 
 .nav-shrink {
@@ -242,7 +242,7 @@ h4 {
   position: relative;
   display: flex;
   justify-content: center;
-  background: url(images/concert-compressor.jpg);
+  background-image: url(images/concert-compressor.jpg);
   background-position: center;
   background-size: cover;
   &:after {
@@ -357,18 +357,30 @@ h4 {
       }
     }
   }
-  button {
-    margin-right: 1rem;
-    border: none;
-    color: inherit;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 1rem 3rem;
-    border-radius: 0.3rem;
-    font-weight: 700;
+}
+
+.music-calls-btn {
+  margin-right: 1rem;
+  border: none;
+  color: inherit;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  border-radius: 0.3rem;
+  font-weight: 700;
+}
+
+.slider {
+  background-color: $lighter;
+  position: relative;
+  z-index: 2;
+  margin: 3rem 4rem;
+  transition: opacity .3s;
+  &:hover {
+    opacity: 0.7;
   }
 }
 
@@ -462,16 +474,89 @@ h4 {
   transform: rotate(60deg);
 }
 
-.slide {
-  font-size: 0;
-}
-
 .slide-container {
   position: relative;
   display: inline-block;
-  width: 300px;
+  width: 100rem;
   overflow: hidden;
   white-space: nowrap;
+  margin: 6rem 4rem 15rem;
+  h2 {
+    text-align: center;
+    padding-bottom: 7rem;
+    font-size: 6rem;
+  }
+}
+
+.slide {
+  font-size: 0;
+  width: 100%;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+  }
+  div {
+    width: 100%;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+    white-space: normal;
+    overflow: hidden;
+    border-radius: 1rem;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+  }
+  h4,
+  p {
+    font-size: 5.5rem;
+    position: relative;
+    z-index: 2;
+    padding: 7rem 4rem 3rem;
+  }
+  p {
+    color: $lighter;
+    font-size: 2rem;
+    padding: 0 4rem;
+  }
+  a {
+    color: $darker;
+  }
+}
+
+.second-row {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media (max-width: 1400px) {
+      height: 100%;
+    }
+  }
+  & > .stripes {
+    top: 0;
+    transform: rotate(60deg);
+  }
+  & > .stripe-three, .stripe-four {
+    transform: rotate(-60deg);
+  }
 }
 
 ::selection {
