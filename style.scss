@@ -164,13 +164,74 @@ h4 {
   color: $lighter;
 }
 
+.mobile-menu {
+  height: 100vh;
+  width: 55%;
+  position: fixed;
+  z-index: 3;
+  right: -100%;
+  background-color: $darker;
+  border-left: 3px solid $highlight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right .3s;
+  text-align: center;
+  li {
+    color: $lighter;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.mobile-menu-expand {
+  right: 0;
+}
+
+.tinted-overlay {
+  position: fixed;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity .3s;
+}
+
+.tinted-overlay-show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.burger {
+  position: absolute;
+  right: 3rem;
+  width: 40px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3;
+  cursor: pointer;
+  span {
+    height: 5px;
+    background-color: $lighter;
+  }
+  @media (min-width: 1151px) {
+    display: none;
+  }
+}
+
 .navigation {
   height: 10rem;
   position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
   transition: all 0.5s;
 }
 
@@ -181,9 +242,11 @@ h4 {
 
 .colour-square {
   height: 100%;
-  width: 100%;
   width: 10rem;
   background-color: $light;
+  @media (max-width: 600px) {
+    width: 7.5rem;
+  }
 }
 
 .logo {
@@ -195,6 +258,9 @@ h4 {
   justify-content: flex-start;
   svg {
     height: 80%;
+  }
+  @media (max-width: 600px) {
+    margin-left: 0;
   }
 }
 
@@ -219,6 +285,9 @@ h4 {
   li {
     color: $lighter;
   }
+  @media (max-width: 1150px) {
+    display: none;
+  }
 }
 
 .social-icons {
@@ -235,6 +304,9 @@ h4 {
     height: 100%;
     width: 5rem;
     padding: 1rem;
+  }
+  @media (max-width: 1150px) {
+    display: none;
   }
 }
 
@@ -271,6 +343,12 @@ h4 {
     text-transform: uppercase;
     font-size: 10rem;
     line-height: 7.5rem;
+    @media (max-width: 600px) {
+      font-size: 6.5rem;
+    }
+  }
+  @media (max-width: 1500px) {
+    margin: 17rem 4rem 4%;
   }
 }
 
@@ -322,12 +400,19 @@ h4 {
         top: -0.3rem;
       }
     }
+    @media (max-width: 600px) {
+      padding-bottom: 1rem;
+    }
   }
   svg {
     position: absolute;
     left: -2.7rem;
     top: 0;
     height: 100%;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin: 2rem 0;
   }
 }
 
@@ -337,6 +422,14 @@ h4 {
     text-decoration: none;
     color: black;
     transition: opacity 0.3s;
+    @media (max-width: 600px) {
+      .music-calls-btn {
+        padding: 1rem 1rem;
+      }
+      &:nth-of-type(2) > .music-calls-btn {
+        padding: 1rem 0;
+      }
+    }
     &:hover {
       opacity: 0.7;
     }
@@ -393,6 +486,10 @@ h4 {
   justify-content: space-between;
   margin-top: 8rem;
   position: relative;
+  @media (max-width: 760px) {
+    flex-direction: column;
+    margin-top: 4rem;
+  }
   div {
     height: 100%;
     width: 100%;
@@ -408,6 +505,9 @@ h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media (max-width: 760px) {
+      display: none;
+    }
   }
   a {
     width: 32.5%;
@@ -425,6 +525,14 @@ h4 {
     }
     &:hover {
       opacity: 0.85;
+    }
+    @media (max-width: 760px) {
+      height: 15rem;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      h3, p {
+        left: 15%;
+      }
     }
   }
   p {
@@ -501,6 +609,15 @@ h4 {
     z-index: -1;
     @media (max-width: 600px) {
       top: 10rem;
+    }
+  }
+}
+
+.first-underline {
+  @media (max-width: 600px) {
+    &:after {
+      width: 55%;
+      top: 14rem;
     }
   }
 }
@@ -593,6 +710,7 @@ h4 {
     }
     @media (max-width: 600px) {
       font-size: 4rem;
+      white-space: normal;
     }
   }
 }
